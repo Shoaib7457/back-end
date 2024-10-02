@@ -40,7 +40,7 @@ app.use(cors({
 // });
 
 let currentIndex = 0;
-app.get("/" , (req , res) =>{
+app.post('/' , (req , res) =>{
   let currentIndex = 0;
 });
 app.get('/api/vehicle/current', (req, res) => {
