@@ -40,8 +40,9 @@ app.use(cors({
 // });
 
 let currentIndex = 0;
-app.post('/' , (req , res) =>{
-  let currentIndex = 0;
+app.post('/reset-index', (req, res) => {
+    currentIndex = 0;
+    res.json({ message: 'currentIndex reset to 0', currentIndex });
 });
 app.get('/api/vehicle/current', (req, res) => {
   const dataPath = path.join(__dirname, 'data', 'vehicledata.json');
