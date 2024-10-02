@@ -11,12 +11,12 @@ app.use(cors({
     credentials: true
 }));
 // // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'maps/build')));
+// app.use(express.static(path.join(__dirname, 'maps/build')));
 
-// // Serve React app for any unhandled routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'maps/build', 'index.html'));
-});
+// // // Serve React app for any unhandled routes
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'maps/build', 'index.html'));
+// });
 
 // app.get('/api/vehicle', (req, res) => {
 //   const dataPath = path.join('data', 'vehicledata.json');
