@@ -6,10 +6,16 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+// app.use(cors({
+//     origin: 'https://front-end-pi-gules.vercel.app/', // allow requests from your frontend
+//     credentials: true
+// }));
 app.use(cors({
-    origin: 'https://front-end-pi-gules.vercel.app/', // allow requests from your frontend
-    credentials: true
-}));
+       origin: 'https://front-end-pi-gules.vercel.app',
+       credentials: true,
+       allowedHeaders: ['Content-Type', 'Authorization']
+   }));
+
 // // Serve static files from the React app
 // app.use(express.static(path.join(__dirname, 'maps/build')));
 
